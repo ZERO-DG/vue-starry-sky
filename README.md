@@ -1,6 +1,6 @@
 # vue-starry-sky
 
-## 包下载&应用
+### 包下载&引用
 
 在 vue 项目中使用 npm 安装
 
@@ -32,7 +32,89 @@ Vue.use(VueStarrySky);
   - stars-count 类型：{Number,String} 星星的数量控制，默认是 800
   - distance 类型：{Number,String} 星星的间距控制，默认是 800
 
-### 备注
+### 原生 JS 写法
+
+博客园可以用这类方法写入或者在设置中
+
+```
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星星特效html版本</title>
+    <style>
+        body {
+            background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+            background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+            background-attachment: fixed;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+            }
+
+            100% {
+                transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+            }
+        }
+
+        #stars {
+            transform: perspective(500px);
+            transform-style: preserve-3d;
+            position: fixed;
+            perspective-origin: 50% 100%;
+            left: 50%;
+            animation: rotate 66s infinite linear;
+            bottom: 0;
+            z-index: -99;
+        }
+
+        .star {
+            width: 2px;
+            height: 2px;
+            background: #f7f7b8;
+            position: fixed;
+            top: 0px;
+            left: 0;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 星星特效 -->
+    <div id="stars">
+    </div>
+
+    <script>
+        (function () {
+            let starsCount = 800; //星星数量
+            let distance = 800;//间距
+            let parentStarts = document.getElementById("stars");
+            for (let i = 0; i < starsCount; i++) {
+                let childStart = document.createElement("div");
+                childStart.setAttribute("class", 'star');
+                parentStarts.appendChild(childStart);
+            }
+            for (let i = 0; i < starsCount; i++) {
+                let item = parentStarts.children[i];
+                let speed = 0.2 + (Math.random() * 1);
+                let thisDistance = distance + (Math.random() * 300);
+                console.log(parentStarts);
+                item.style.transformOrigin = "0 0 " + thisDistance + "px";
+                item.style.transform = "translate3d(0,0,-" + thisDistance + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + speed + "," + speed + ")";
+            }
+        })();
+    </script>
+</body>
+
+</html>
+
+```
+
+#### 备注:
 
 基于 vue 的一个星空特效插件
 待更新...
