@@ -1,11 +1,15 @@
 {
   "name": "vue-starry-sky",
   "version": "0.1.0",
-  "private": true,
+  "description": "基于VUE的星空特效组件，可以扩展",
+  "main": "lib/vue-starry-sky.umd.min.js",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-starry-sky --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
