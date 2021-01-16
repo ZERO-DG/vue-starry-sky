@@ -8,6 +8,13 @@
 npm install vue-starry-sky
 ```
 
+### 文件地址
+
+下面是项目地址：
+
+- git 地址: [vue-starry-sky](https://github.com/ZERO-DG/vue-starry-sky.git)
+- npm 地址：[vue-starry-sky](https://www.npmjs.com/package/vue-starry-sky)
+
 ### 使用方法
 
 在 vue 项目中 src/main.js 中加入下列语句
