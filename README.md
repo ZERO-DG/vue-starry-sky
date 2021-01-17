@@ -124,7 +124,7 @@ Vue.use(VueStarrySky);
 
 ### 参照の大佬
 
-bilibili up 主 [欧贵姥爷啊](https://www.bilibili.com/video/BV1EJ411e7sr) 已授权
+bilibili up 主 [欧贵姥爷啊](https://www.bilibili.com/video/BV1EJ411e7sr) 等待授权
 
 #### 备注:
 
