@@ -12,7 +12,7 @@ npm install vue-starry-sky
 
 下面是项目地址：
 
-- git 地址: [vue-starry-sky](https://github.com/ZERO-DG/vue-starry-sky.git)
+- git 地址：[vue-starry-sky](https://github.com/ZERO-DG/vue-starry-sky.git)
 - npm 地址：[vue-starry-sky](https://www.npmjs.com/package/vue-starry-sky)
 
 ### 使用方法
@@ -21,7 +21,8 @@ npm install vue-starry-sky
 
 ```
 //main.js
-import VueStarrySky from "../packages/index"
+import VueStarrySky from "vue-starry-sky"
+import "vue-starry-sky/lib/vue-starry-sky.css"
 
 Vue.use(VueStarrySky);
 
@@ -120,6 +121,10 @@ Vue.use(VueStarrySky);
 </html>
 
 ```
+
+### 参照の大佬
+
+bilibili up 主 [欧贵姥爷啊](https://www.bilibili.com/video/BV1EJ411e7sr) 已授权
 
 #### 备注:
 
