@@ -25,10 +25,7 @@ export default {
     },
   },
   data() {
-    return {
-      // starsCount: 800, //星星数量
-      // distance: 800, //间距
-    };
+    return {};
   },
   mounted() {
     let _this = this;
